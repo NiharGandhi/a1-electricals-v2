@@ -7,10 +7,10 @@ import DistributorCard from "./DistributorCard";
 export const Distributors = () => {
     return (
         <>
-            <div className="items-center justify-center w-full mt-0 py-4 gradient">
+            <div className="items-center justify-center w-full mt-0 py-4">
                 <h1 className="text-orange-500 text-4xl md:text-6xl lg:text-6xl font-bold mt-2 mb-2 lg:mt-4 py-2 text-center">Distributors</h1>
             </div>
-            <div className="w-full h-full orange_gradient mt-1 p-8">
+            <div className="w-full h-full mt-1 p-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                     {/* Distributor Cards */}
                     <DistributorCard

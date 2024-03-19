@@ -15,12 +15,12 @@ export const Product3Page = () => {
             <div className="relative flex flex-col lg:flex-row bg-white lg:mb-[700px]">
                 <div className="lg:w-1/2 relative bg-white">
                     <Link href="/products">
-                        <button className="absolute text-black top-[-130px] lg:top-[10px] lg:ml-4 underline text-sm px-1 lg:text-lg z-20">
+                        <button className="absolute text-black top-[-1px] lg:top-[10px] lg:ml-4 underline text-sm px-1 lg:text-lg z-20">
                             Back
                         </button>
                     </Link>
                     <div className="absolute text-center items-center justify-center z-10">
-                        <h1 className="text-center text-2xl md:text-lg lg:text-6xl leading-tight font-bold px-4 mt-[1px] lg:mt-[100px] lg:px-12 text-orange-500">
+                        <h1 className="text-center text-2xl md:text-lg lg:text-6xl leading-tight font-bold px-4 mt-[10px] lg:mt-[100px] lg:px-12 text-orange-500">
                             Aluminium & PVC Cable Cleats
                         </h1>
                         <div className="mt-20 hidden sm:block w-[500px] items-center justify-center ml-[130px]">

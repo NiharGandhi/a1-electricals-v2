@@ -23,30 +23,12 @@ export const Product5Page = () => {
         <>  
             <div className="items-center justify-center w-full mt-0 py-4 bg-white">
                 <Link href="/products">
-                    <button className="absolute text-black top-[-130px] lg:top-[90px] lg:ml-4 underline text-sm px-1 lg:text-lg">
+                    <button className="absolute text-black top-[85px] lg:top-[90px] lg:ml-4 underline text-sm px-1 lg:text-lg">
                         Back
                     </button>
                 </Link>
                 <h1 className="text-orange-500 text-4xl md:text-6xl lg:text-6xl font-bold mt-2 mb-6 lg:mt-4 py-2 text-center">OTHER PRODUCTS MANUFACTURED & SUPPLIED</h1>
             </div>
-            {/* <div className="relative">
-                <Image
-                    src={HeaderBanner}
-                    alt="Hero Image"
-                    className="p-0 m-0"
-                    layout="responsive"
-                    width={1200}
-                    height={100} // Adjust the height as needed
-                />
-                <div className="absolute inset-x-0 bottom-0 flex items-center justify-center w-full">
-                    <Link href="/products">
-                        <button className="absolute text-white top-[-130px] lg:top-[-520px] underline text-sm px-1 lg:text-lg">
-                            Back
-                        </button>
-                    </Link>
-                    <h1 className="text-white text-xl md:text-6xl lg:text-8xl font-bold mt-[-175px] md:mt-[-300px] lg:mt-[-750px] text-center justify-items-center mr-[15px]">OTHER PRODUCTS MANUFACTURED & SUPPLIED</h1>
-                </div>
-            </div> */}
             <div className="relative">
                 <div className="container mx-auto py-8">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
