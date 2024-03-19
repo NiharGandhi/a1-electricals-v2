@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "./Footer";
 import Image from "next/image";
 import BlurryBg from "../../public/assets/bbblurry.svg";
-import Cleats from "../../public/assets/cleats.png";
+import Cleats from "../../public/assets/Cleats.png";
 
 const pdfData = [
     { title: "Technical Details:", pdfUrl: "/assets/A1-Electricals-Cable-Glands.pdf" },
