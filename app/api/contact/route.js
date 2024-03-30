@@ -5,6 +5,8 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
     const body = await request.json();
 
+    const pwd = process.env.EMAIL_PWD
+
         try {
             const { contactPerson, email, phone, city, country, inquiryFor, comments } = body;
 
@@ -15,7 +17,7 @@ export async function POST(request) {
                 secure: false, // true for 465, false for other ports
                 auth: {
                     user: 'nihargandhi0000@gmail.com', // SMTP email
-                    pass: 'huql liye tacq chdu', // SMTP password
+                    pass: pwd, // SMTP password
                     },
             });
 
