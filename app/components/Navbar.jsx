@@ -13,7 +13,7 @@ const navLinks = [
     { name: 'News & Events', url: '/News-Events' },
     { name: 'Inquiry', url: '/Inquiry' },
     { name: 'Contact Us', url: '/Contact-Us' },
-    { name: 'Distributors', url: '/Distributors' },
+    // { name: 'Distributors', url: '/Distributors' },
 ];
 
 export const Navbar = () => {

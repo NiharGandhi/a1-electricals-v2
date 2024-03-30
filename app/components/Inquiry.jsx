@@ -1,8 +1,8 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
-import HeaderBanner from "../../public/assets/header-banner.jpg";
 import Footer from "./Footer";
+import { Toaster, toast } from 'sonner'
+
 
 export const Inquiry = () => {
     const [formData, setFormData] = useState({
@@ -13,43 +13,48 @@ export const Inquiry = () => {
         country: "",
         inquiryFor: "",
         comments: "",
-        name: "",
-        emailAddress: "",
-        phone: "",
-        message: ""
     });
+
+    const [loading, setLoading] = useState(false); // Loading state
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    // Update your handleSubmit function
+    async function handleSubmit(e) {
         e.preventDefault();
-        // Send form data to backend for processing and email sending
-        console.log(formData);
+        setLoading(true); // Set loading state to true
+
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            toast.success("Inquiry sent successfully"); // Success toast
+        } else {
+            toast.error("Failed to send inquiry"); // Error toast
+        }
+
+        setLoading(false); // Set loading state back to false
         // Reset form fields after submission
         setFormData({
             contactPerson: "",
-            companyName: "",
-            address: "",
             email: "",
             phone: "",
             city: "",
-            state: "",
             country: "",
-            postalCode: "",
-            fax: "",
             inquiryFor: "",
             comments: "",
-            name: "",
-            emailAddress: "",
-            phone: "",
-            message: ""
         });
-    };
+    }
 
     return (
-        <>  
+        <>
             <div className="items-center justify-center w-full mt-0 py-4 bg-white">
                 <h1 className="text-orange-500 text-4xl md:text-6xl lg:text-6xl font-bold mt-2 mb-6 lg:mt-4 py-2 text-center">Inquiry</h1>
             </div>
@@ -68,23 +73,23 @@ export const Inquiry = () => {
                     </div>
                     {/* Phone */}
                     <div className="mb-4">
-                        <label className="block mb-2">Phone</label>
+                        <label className="block mb-2">Phone*</label>
                         <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" />
-                    </div>
-                    {/* City */}
-                    <div className="mb-4">
-                        <label className="block mb-2">City</label>
-                        <input type="text" name="city" value={formData.city} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" />
                     </div>
                     {/* Country */}
                     <div className="mb-4">
                         <label className="block mb-2">Country</label>
                         <input type="text" name="country" value={formData.country} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" />
                     </div>
+                    {/* City */}
+                    <div className="mb-4">
+                        <label className="block mb-2">City</label>
+                        <input type="text" name="city" value={formData.city} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" />
+                    </div>
                     {/* Inquiry For */}
                     <div className="mb-4">
-                        <label className="block mb-2">Inquiry For</label>
-                        <select name="inquiryFor" value={formData.inquiryFor} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500">
+                        <label className="block mb-2">Inquiry For*</label>
+                        <select name="inquiryFor" value={formData.inquiryFor} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" required>
                             <option value="">Select</option>
                             <option value="Industrial cable glands - A1/A2, BW and CW gland kits">Industrial cable glands - A1/A2, BW and CW gland kits</option>
                             <option value="Cable glands for hazardous areas">Cable glands for hazardous areas</option>
@@ -105,19 +110,18 @@ export const Inquiry = () => {
                         <label className="block mb-2">Comments</label>
                         <textarea name="comments" value={formData.comments} onChange={handleChange} className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500"></textarea>
                     </div>
-                    {/* Captcha */}
-                    <div className="mb-4">
-                        <label className="block mb-2">1 + zero = ?</label>
-                        <input type="text" name="captcha" className="w-full px-4 py-2 border rounded focus:outline-none focus:border-blue-500" />
-                    </div>
                     <div>
                         <div>
-                            <button type="submit" className="bg-blue-950 hover:shadow-orange-500 hover:shadow-lg text-white px-6 py-1 rounded-xl">Submit</button>
+                            <button type="submit" className="bg-blue-950 hover:shadow-orange-500 hover:shadow-lg text-white px-6 py-1 rounded-xl" disabled={loading}>
+                                {loading ? 'Submitting...' : 'Submit'}
+                            </button>
                         </div>
                     </div>
                 </form>
             </div>
+            <Toaster richColors/>
             <Footer />
         </>
     );
 };
+

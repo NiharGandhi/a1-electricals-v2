@@ -2,15 +2,17 @@
 
 import Image from "next/image";
 import CableLug from "../../public/assets/cable_Accessories.svg";
-import BlurryBg from "../../public/assets/bbblurry.svg";
+import BlurryBg from "../../public/assets/gradient-header.svg";
+import Lug from "../../public/assets/lug.png"
+import Header from "../../public/assets/header_image.png";
 import TextCard from "./TextCard";
 import Footer from "./Footer";
+
 
 export const Hero = () => {
     const textData = [
         { text: "Industrial brass cable glands and wiping glands" },
         { text: "Copper/Aluminium cable lugs and inline connectors" },
-        { text: "Heat shrink terminations, joints, tubing's and accessories" },
         { text: "Bus bars, copper strips, earth rods and earthing accessories" },
         { text: "Forging and casting items from ferrous and non ferrous metals" },
         { text: "Transmission & Distribution Hardware Fittings" }
@@ -36,10 +38,10 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div className="lg:w-1/2 relative">
-                    <Image src={BlurryBg} alt="Blurry Background" className="hidden sm:block w-full h-auto absolute top-0 left-0 blur-effect mt-[-150px] lg:mt-[-0px]" />
-                    <Image src={CableLug} alt="Cable Lug" className="hidden sm:block w-full h-auto mt-[-150px] lg:mt-[-1px] absolute top-0 left-0 z-0 " />
-                    <Image src={BlurryBg} alt="Blurry Background" width={1000} height={1000} className="mt-[-20px] opacity-50 top-0 left-0 blur-effect lg:hidden z-0" />
-                    <Image src={CableLug} alt="Cable Lug" width={400} height={400} className="mt-[-170px] top-0 left-0 lg:hidden -z-10" />
+                    <Image src={BlurryBg} alt="Blurry Background" className="hidden sm:block w-full h-auto absolute top-0 left-0  mt-[-150px] lg:mt-[-0px] opacity-30" />
+                    <Image src={Header} alt="Cable Lug" className="hidden sm:block w-full h-auto mt-[-150px] lg:mt-[-1px] absolute top-0 left-0 z-0" />
+                    <Image src={BlurryBg} alt="Blurry Background" width={1000} height={1000} className="mt-[0px] opacity-0 top-0 left-0 lg:hidden z-0" />
+                    <Image src={Header} alt="Cable Lug" width={400} height={400} className="mt-[-170px] top-0 left-0 lg:hidden -z-10" />
                 </div>
             </div>
             <div className="w-full h-full bg-white mb-10">

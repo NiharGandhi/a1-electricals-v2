@@ -4,8 +4,9 @@ import { GoogleMapsEmbed } from '@next/third-parties/google';
 import Footer from "./Footer";
 
 export const ContactUs = () => {
+
     return (
-        <>
+        <>  
             <div className="items-center justify-center w-full mt-0 py-4 bg-white">
                 <h1 className="text-orange-500 text-4xl md:text-6xl lg:text-6xl font-bold mt-2 mb-6 lg:mt-4 py-2 text-center">Contact Us</h1>
             </div>
@@ -20,17 +21,17 @@ export const ContactUs = () => {
                         zoom="19"
                     />
                 </div>
-                <div className="max-w-lg bg-white rounded-lg overflow-hidden shadow-md shadow-blue-950">
+                {/* <div className="max-w-lg bg-white rounded-lg overflow-hidden shadow-md shadow-blue-950">
                     <GoogleMapsEmbed
                         apiKey={process.env.GOOGLE_MAPS_API}
                         height={400}
                         width="100%"
                         mode="place"
-                        q="A-1+Electricals+20,+Alankar+Chamber,+Dhebar+Chowk,+Trikon+Baug,+Dhebar+Chowk+Rajkot,+Gujarat+360001+India"
+                        q="1051,+Kishan+Gate+Rd,+GIDC,+Metoda,+Rajkot,+Gujarat+360004"
                         zoom="19"
                     />
-                </div>
-                <div className="max-w-l rounded-lg overflow-hidden shadow-md shadow-blue-950 bg-gray-200">
+                </div> */}
+                <div className="max-w-l rounded-lg overflow-hidden shadow-md shadow-blue-950 bg-gray-200 h-[200px]">
                     <div className="p-6">
                         <h2 className="text-xl font-semibold mb-4">Factory Address</h2>
                         <p className="text-lg text-black">A-1 Electricals,</p>

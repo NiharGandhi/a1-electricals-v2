@@ -5,7 +5,7 @@ import React from "react";
 const PdfDisplay = ({ title, pdfUrl }) => {
     const handleDownload = () => {
         // Add logic here for downloading the PDF
-        console.log("Downloading PDF...");
+        // console.log("Downloading PDF...");
     };
 
     return (

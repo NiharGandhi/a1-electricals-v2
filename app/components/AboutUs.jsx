@@ -69,11 +69,11 @@ export const AboutUs = () => {
                     <Image src={Delivery} alt="Delivery" width={200} height={200} className="ml-[-1190px] mb-[10px] hidden lg:block" />
                 </div>
                 {/* Credentials and Registrations */}
-                <div className="flex items-center justify-center text-center">
+                {/* <div className="flex items-center justify-center text-center">
                     <h1 className="text-center text-4xl md:text-6xl lg:text-6xl font-bold font-sans text-orange-400 mt-1">Credentials and Registrations</h1>
-                </div>
+                </div> */}
                 {/* Image Card */}
-                <div className="flex items-center justify-center z-10 lg:py-8 py-6">
+                {/* <div className="flex items-center justify-center z-10 lg:py-8 py-6">
                     <div className="max-w-3xl mx-10 lg:mx-auto p-8 bg-white shadow-lg rounded-lg shadow-orange-500">
                         <div className="grid grid-cols-3 gap-4">
                             {images.map((image) => (
@@ -83,8 +83,8 @@ export const AboutUs = () => {
                             ))}
                         </div>
                     </div>
-                </div>
-                {lightboxImage && (
+                </div> */}
+                {/* {lightboxImage && (
                     <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-75 z-50">
                         <div className="relative">
                             <button className="absolute top-4 right-4 text-white" onClick={closeLightBox}>
@@ -93,7 +93,7 @@ export const AboutUs = () => {
                             <Image src={lightboxImage.src} alt={lightboxImage.alt} width={500} height={500} />
                         </div>
                     </div>
-                )}
+                )} */}
             </div>
             <div>
                 
